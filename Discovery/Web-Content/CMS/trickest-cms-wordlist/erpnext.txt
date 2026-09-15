@@ -533,6 +533,7 @@ erpnext/accounts/doctype/financial_report_row/financial_report_row.json
 erpnext/accounts/doctype/period_closing_voucher/__init__.py
 erpnext/accounts/doctype/period_closing_voucher/period_closing_voucher.js
 erpnext/accounts/doctype/period_closing_voucher/period_closing_voucher.json
+erpnext/accounts/doctype/period_closing_voucher/period_closing_voucher_dashboard.py
 erpnext/accounts/doctype/period_closing_voucher/README.md
 erpnext/accounts/doctype/period_closing_voucher/period_closing_voucher.py
 erpnext/accounts/doctype/period_closing_voucher/test_period_closing_voucher.py
@@ -2509,6 +2510,7 @@ erpnext/patches/v16_0/access_control_for_project_users.py
 erpnext/patches/v16_0/remove_payables_receivables_workspace.py
 erpnext/patches/v16_0/set_supplier_quotation_order_status.py
 erpnext/patches/v16_0/set_invoice_type_in_pos_settings.py
+erpnext/patches/v16_0/recalculate_holiday_list_totals.py
 erpnext/patches/v16_0/add_currency_to_blanket_orders.py
 erpnext/patches/v16_0/add_portal_redirects.py
 erpnext/patches/v16_0/uom_category.py
@@ -2560,6 +2562,7 @@ erpnext/patches/v16_0/update_requested_qty_packed_item.py
 erpnext/patches/v16_0/convert_commission_rate_to_percent.py
 erpnext/patches/v16_0/add_accounting_dimensions_to_journal_template_accounts.py
 erpnext/patches/v16_0/crm_settings_handle_allowed_users_for_frappe_crm.py
+erpnext/patches/v16_0/recalculate_returned_delivery_note_billing_status.py
 erpnext/patches/v16_0/set_valuation_method_on_companies.py
 erpnext/patches/v16_0/recalculate_bins_for_production_plan_items.py
 erpnext/patches/v16_0/create_accounting_dimensions_in_landed_cost_taxes_and_charges.py
@@ -2572,6 +2575,7 @@ erpnext/patches/v16_0/update_company_custom_field_in_bin.py
 erpnext/patches/v16_0/move_warehouse_defaults_to_company.py
 erpnext/patches/v16_0/fix_titles.py
 erpnext/patches/v16_0/set_default_close_opportunity_after_days.py
+erpnext/patches/v16_0/rename_component_cost_valuation_type.py
 erpnext/patches/v16_0/depends_on_inv_dimensions.py
 erpnext/patches/v16_0/merge_repost_settings_to_accounts_settings.py
 erpnext/config/projects.py

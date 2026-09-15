@@ -2521,6 +2521,11 @@ accounts/doctype/period_closing_voucher/period_closing_voucher.json
 doctype/period_closing_voucher/period_closing_voucher.json
 period_closing_voucher/period_closing_voucher.json
 period_closing_voucher.json
+erpnext/accounts/doctype/period_closing_voucher/period_closing_voucher_dashboard.py
+accounts/doctype/period_closing_voucher/period_closing_voucher_dashboard.py
+doctype/period_closing_voucher/period_closing_voucher_dashboard.py
+period_closing_voucher/period_closing_voucher_dashboard.py
+period_closing_voucher_dashboard.py
 erpnext/accounts/doctype/period_closing_voucher/README.md
 accounts/doctype/period_closing_voucher/README.md
 doctype/period_closing_voucher/README.md
@@ -12160,6 +12165,10 @@ erpnext/patches/v16_0/set_invoice_type_in_pos_settings.py
 patches/v16_0/set_invoice_type_in_pos_settings.py
 v16_0/set_invoice_type_in_pos_settings.py
 set_invoice_type_in_pos_settings.py
+erpnext/patches/v16_0/recalculate_holiday_list_totals.py
+patches/v16_0/recalculate_holiday_list_totals.py
+v16_0/recalculate_holiday_list_totals.py
+recalculate_holiday_list_totals.py
 erpnext/patches/v16_0/add_currency_to_blanket_orders.py
 patches/v16_0/add_currency_to_blanket_orders.py
 v16_0/add_currency_to_blanket_orders.py
@@ -12364,6 +12373,10 @@ erpnext/patches/v16_0/crm_settings_handle_allowed_users_for_frappe_crm.py
 patches/v16_0/crm_settings_handle_allowed_users_for_frappe_crm.py
 v16_0/crm_settings_handle_allowed_users_for_frappe_crm.py
 crm_settings_handle_allowed_users_for_frappe_crm.py
+erpnext/patches/v16_0/recalculate_returned_delivery_note_billing_status.py
+patches/v16_0/recalculate_returned_delivery_note_billing_status.py
+v16_0/recalculate_returned_delivery_note_billing_status.py
+recalculate_returned_delivery_note_billing_status.py
 erpnext/patches/v16_0/set_valuation_method_on_companies.py
 patches/v16_0/set_valuation_method_on_companies.py
 v16_0/set_valuation_method_on_companies.py
@@ -12412,6 +12425,10 @@ erpnext/patches/v16_0/set_default_close_opportunity_after_days.py
 patches/v16_0/set_default_close_opportunity_after_days.py
 v16_0/set_default_close_opportunity_after_days.py
 set_default_close_opportunity_after_days.py
+erpnext/patches/v16_0/rename_component_cost_valuation_type.py
+patches/v16_0/rename_component_cost_valuation_type.py
+v16_0/rename_component_cost_valuation_type.py
+rename_component_cost_valuation_type.py
 erpnext/patches/v16_0/depends_on_inv_dimensions.py
 patches/v16_0/depends_on_inv_dimensions.py
 v16_0/depends_on_inv_dimensions.py
