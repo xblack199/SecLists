@@ -53,6 +53,7 @@ tests/unit/Grav/Console/Gpm/SelfupgradeCommandTest.php
 tests/unit/Grav/Console/Gpm/UpdateCommandDiagnosticsTest.php
 tests/unit/Grav/Common/Processors/InitializeProcessorTest.php
 tests/unit/Grav/Common/Assets/PipelineCssRewriteTest.php
+tests/unit/Grav/Common/PluginMergeConfigTest.php
 tests/unit/Grav/Common/ComposerTest.php
 tests/unit/Grav/Common/Helpers/PluginAutoloaderTest.php
 tests/unit/Grav/Common/Helpers/FileReaderTest.php
@@ -70,6 +71,7 @@ tests/unit/Grav/Common/Scheduler/SchedulerDirectoryModeTest.php
 tests/unit/Grav/Common/ThemesTest.php
 tests/unit/Grav/Common/GPM/LicensesTest.php
 tests/unit/Grav/Common/GPM/InstallerDestinationTest.php
+tests/unit/Grav/Common/GPM/InstallerReplaceFileTest.php
 tests/unit/Grav/Common/GPM/UpgraderFamilyTest.php
 tests/unit/Grav/Common/GPM/GPMTest.php
 tests/unit/Grav/Common/Language/LanguageTest.php
@@ -78,6 +80,7 @@ tests/unit/Grav/Common/ContainerInitializedTest.php
 tests/unit/Grav/Common/UriTest.php
 tests/unit/Grav/Common/Data/GroupBlueprintSecurityTest.php
 tests/unit/Grav/Common/Data/PageBlueprintContentTest.php
+tests/unit/Grav/Common/Data/ListElementsValidationTest.php
 tests/unit/Grav/Common/Data/BlueprintTest.php
 tests/unit/Grav/Common/Data/ValidationDatetimeTest.php
 tests/unit/Grav/Common/Data/ValidationNumberTest.php
@@ -98,6 +101,7 @@ tests/unit/Grav/Common/Page/Medium/MediaMetadataQueryTest.php
 tests/unit/Grav/Common/Page/Medium/ImageMediumAlternativesFormatTest.php
 tests/unit/Grav/Common/Page/Medium/ImageMediumUrlTest.php
 tests/unit/Grav/Common/Page/Medium/ImageMediumDerivativesMaxWidthBoundaryTest.php
+tests/unit/Grav/Common/Page/Medium/ImageMediumUrlResizeCanvasTest.php
 tests/unit/Grav/Common/Page/PageUrlExtensionTest.php
 tests/unit/Grav/Common/Page/PageContentTwigOrderTest.php
 tests/unit/Grav/Common/Page/PageUrlCanonicalTest.php
@@ -116,6 +120,8 @@ tests/unit/Grav/Common/DebuggerCredentialsTest.php
 tests/unit/Grav/Common/GravOutputBuffersTest.php
 tests/unit/Grav/Common/Twig/Extensions/GravExtensionTest.php
 tests/unit/Grav/Common/Twig/Sandbox/SandboxConfigTest.php
+tests/unit/Grav/Common/Twig/Sandbox/SourceSandboxCompilationTest.php
+tests/unit/Grav/Common/Twig/TwigResolveTemplateTest.php
 tests/unit/Grav/Common/Twig/TwigForkPatchesTest.php
 tests/unit/Grav/Common/Twig/DeferredExtensionTest.php
 tests/unit/Grav/Common/Twig/TwigAutoescapeCompatTest.php
@@ -127,6 +133,8 @@ tests/unit/Grav/Common/Security/MediaStyleSecurityTest.php
 tests/unit/Grav/Common/Security/SandboxDefaultsMergeTest.php
 tests/unit/Grav/Common/Security/UnserializeIntegritySecurityTest.php
 tests/unit/Grav/Common/Security/DetectXssTest.php
+tests/unit/Grav/Common/Security/BlueprintDynamicConfigProvenanceTest.php
+tests/unit/Grav/Common/Security/BlueprintReplaceNameProvenanceTest.php
 tests/unit/Grav/Common/Security/DetectXssFailClosedTest.php
 tests/unit/Grav/Common/Security/ZipBombSecurityTest.php
 tests/unit/Grav/Common/Security/DynamicDataCallGuardTest.php
@@ -146,7 +154,12 @@ tests/unit/Grav/Common/Security/MediaAttributeSecurityTest.php
 tests/unit/Grav/Common/Security/ModularTwigContentGuardTest.php
 tests/unit/Grav/Common/Security/UsernameValidationTest.php
 tests/unit/Grav/Common/Security/TwigSandboxTest.php
+tests/unit/Grav/Common/Security/NonceKeyFilePermissionsTest.php
+tests/unit/Grav/Installer/HtaccessPathInfoTest.php
+tests/unit/Grav/Installer/GravSchemaTest.php
+tests/unit/Grav/Installer/HtaccessEnvFoldersTest.php
 tests/unit/Grav/Installer/InstallCompatibilityTest.php
+tests/unit/Grav/Framework/Flex/FlexModuleContentCacheTest.php
 tests/unit/Grav/Framework/Flex/FlexPageSearchTest.php
 tests/unit/Grav/Framework/Filesystem/FilesystemTest.php
 tests/unit/Grav/Framework/File/Formatter/CsvFormatterTest.php
@@ -167,6 +180,7 @@ tests/fake/twig-first-site/user/themes/testing/templates/.gitkeep
 tests/fake/twig-first-site/user/themes/testing/templates/default.html.twig
 tests/fake/twig-first-site/user/pages/01.twig-first/default.md
 tests/fake/twig-first-site/user/pages/02.markdown-first/default.md
+tests/fake/htaccess-2.2.3.txt
 tests/fake/simple-site/user/pages/04.page-translated/default.en.md
 tests/fake/simple-site/user/pages/04.page-translated/default.fr.md
 tests/fake/simple-site/user/pages/03.about/default.md
@@ -200,6 +214,7 @@ tests/fake/all-order-site/user/pages/02.docs/zeta/child/default.md
 tests/fake/all-order-site/user/pages/02.docs/zeta/default.md
 tests/fake/all-order-site/user/pages/02.docs/default.md
 tests/fake/all-order-site/user/pages/unprefixed/default.md
+tests/fake/htaccess-user-env.txt
 tests/fake/media-metadata/photo1.jpg.meta.yaml
 tests/fake/media-metadata/photo2.jpg.meta.yaml
 tests/fake/media-metadata/photo3.jpg.meta.yaml
@@ -631,6 +646,7 @@ system/src/Grav/Common/Security.php
 system/src/Grav/Common/Backup/Backups.php
 system/src/Grav/Installer/updates/1.8.0_2026-06-26_0.php
 system/src/Grav/Installer/updates/2.1.5_2026-09-14_0.php
+system/src/Grav/Installer/updates/2.2.2_2026-09-28_0.php
 system/src/Grav/Installer/updates/1.8.0_2026-06-15_0.php
 system/src/Grav/Installer/updates/1.7.0_2020-11-20_1.php
 system/src/Grav/Installer/updates/1.8.0_2026-06-30_1.php
@@ -639,6 +655,7 @@ system/src/Grav/Installer/updates/1.8.0_2026-04-15_0.php
 system/src/Grav/Installer/updates/2.1.10_2026-09-22_0.php
 system/src/Grav/Installer/updates/1.8.0_2026-08-13_0.php
 system/src/Grav/Installer/updates/1.8.0_2025-09-21_0.php
+system/src/Grav/Installer/updates/2.2.4_2026-09-30_0.php
 system/src/Grav/Installer/updates/2.1.8_2026-09-18_0.php
 system/src/Grav/Installer/updates/1.8.0_2026-06-09_0.php
 system/src/Grav/Installer/updates/1.8.0_2026-08-12_0.php
@@ -646,6 +663,7 @@ system/src/Grav/Installer/updates/1.8.0_2026-07-03_0.php
 system/src/Grav/Installer/updates/1.8.0_2026-06-30_0.php
 system/src/Grav/Installer/updates/2.2.0_2026-09-23_0.php
 system/src/Grav/Installer/updates/2.1.6_2026-09-14_0.php
+system/src/Grav/Installer/updates/2.2.2_2026-09-28_1.php
 system/src/Grav/Installer/updates/2.2.1_2026-09-25_0.php
 system/src/Grav/Installer/InstallException.php
 system/src/Grav/Installer/VersionUpdate.php
